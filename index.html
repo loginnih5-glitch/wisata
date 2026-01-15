@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explore The World</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1e88e5;
+      --secondary: #2e7d32;
+      --light: #ffffff;
+      --beige: #f4f6f5;
+      --dark: #1a1a1a;
+      --gray: #777;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--gray);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 16px;
+      display: block;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+      url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      color: #eee;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 36px;
+      background: var(--primary);
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1565c0;
+      transform: translateY(-3px);
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,.12);
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--beige);
+      border-radius: 40px;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* TESTIMONI */
+    .testimonial {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .profile img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .stars {
+      color: #ffc107;
+      font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d1b2a;
+      color: #ccc;
+      text-align: center;
+      padding: 50px 8%;
+    }
+
+    footer a {
+      color: #90caf9;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer p {
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ANIMATION */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: 0.8s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="fade-up">
+      <h1>Explore The World</h1>
+      <p>Discover breathtaking destinations around the world with a modern, aesthetic, and unforgettable travel experience.</p>
+      <a href="#destinasi" class="btn">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- DESTINASI -->
+  <section id="destinasi">
+    <h2 class="fade-up">World Popular Destinations</h2>
+    <div class="grid">
+      <div class="card fade-up">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34">
+        <div class="card-content">
+          <h3>Paris</h3>
+          <p>France</p>
+        </div>
+      </div>
+
+      <div class="card fade-up">
+        <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad">
+        <div class="card-content">
+          <h3>Tokyo</h3>
+          <p>Japan</p>
+        </div>
+      </div>
+
+      <div class="card fade-up">
+        <img src="https://images.unsplash.com/photo-1500534314209-a26db0f5f9c9">
+        <div class="card-content">
+          <h3>New York</h3>
+          <p>United States</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about fade-up">
+    <h2>About World Tourism</h2>
+    <p>
+      World tourism offers diverse cultures, iconic landmarks, and unforgettable adventures.
+      From romantic cities to futuristic metropolises, every journey creates stories worth sharing.
+    </p>
+  </section>
+
+  <!-- GALERI -->
+  <section>
+    <h2 class="fade-up">Travel Gallery</h2>
+    <div class="grid">
+      <img class="fade-up" src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+      <img class="fade-up" src="https://images.unsplash.com/photo-1500048993959-d6b7bcb9f1d4">
+      <img class="fade-up" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d">
+      <img class="fade-up" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+    </div>
+  </section>
+
+  <!-- TESTIMONI -->
+  <section>
+    <h2 class="fade-up">Traveler Reviews</h2>
+    <div class="grid">
+      <div class="testimonial fade-up">
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/women/65.jpg">
+          <div>
+            <strong>Sophia</strong>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p>This website inspires me to travel the world. Super clean and aesthetic!</p>
+      </div>
+
+      <div class="testimonial fade-up">
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/men/41.jpg">
+          <div>
+            <strong>Daniel</strong>
+            <div class="stars">★★★★☆</div>
+          </div>
+        </div>
+        <p>Modern design, smooth animation, and very Gen Z friendly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <a href="#">Instagram</a>
+      <a href="#">TikTok</a>
+      <a href="#">YouTube</a>
+    </div>
+    <p>© 2026 Explore The World. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
